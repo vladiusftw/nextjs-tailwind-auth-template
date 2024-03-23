@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --theme-default: #1e73bf;
+
+    --btn-primary: #12518c;
+    --btn-primary-hover: #1e73bf;
+    --btn-disabled: #a6b8cc;
+    --btn-disabled-text: #576b7c;
+
+    --tab-brand-100: #12518c;
+    --tab-brand-100-hover: #1e73bf;
+    --tab-brand-200: #eff0f4;
+    --tab-brand-200-hover: #dde2e9;
+    --tab-brand-300: #979797;
+
+    --input-brand-border: #e5e5e5;
+    --input-brand-error: #ff0000;
+    --input-brand-placeholder: #a9a9a9;
+    --input-brand-active-border: #12518c;
+    --input-brand-bg-disabled: #f7f7f8;
+
+    --dropdown-hover: #d9e5f3;
+    --dropdown-border: #e5e5e5;
+    --dropdown-placeholder: #a9a9a9;
+    --dropdown-brand-100: #12518c;
+    --dropdown-error: #ff0000;
+}
+
+@layer base {
+    body {
+        @apply bg-[#F7F7F7];
+    }
+
+    input {
+        @apply outline-none border border-black rounded-sm p-2 focus:border-brand-100 transition-colors duration-300;
+    }
+
+    th {
+        @apply text-start px-2;
+    }
+
+    td {
+        word-break: break-word;
+        @apply px-2  max-w-[40px];
+    }
+}
