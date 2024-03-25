@@ -8,7 +8,7 @@ type Props = {
     children: React.ReactNode
 }
 
-export default async function Auth({ children }: Props) {
+export default async function ServerAuth({ children }: Props) {
     const session = await getServerSession(authOptions)
 
     const headersList = headers()

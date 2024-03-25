@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import AppProvider from './AppProvider'
 import Loading from '../layout/Loading'
 import RefreshTokenHandler from '../auth/RefreshTokenHandler'
+import ClientAuth from '../auth/ClientAuth'
 
 type Props = {
     children: React.ReactNode
@@ -30,7 +31,7 @@ const Providers = ({ children }: Props) => {
             <QueryClientProvider client={client}>
                 <AppProvider>
                     <Loading />
-                    {children}
+                    <ClientAuth>{children}</ClientAuth>
                 </AppProvider>
             </QueryClientProvider>
 
