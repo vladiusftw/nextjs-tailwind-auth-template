@@ -22,7 +22,7 @@ export default function ClientAuth({ children }: Props) {
             }
         } else if (session !== undefined) {
             if (pathname === '/') {
-                router.replace('/users')
+                router.replace('/home')
             }
         }
     }, [session])
